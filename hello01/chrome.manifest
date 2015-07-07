@@ -1,0 +1,4 @@
+content hello chrome/content/
+skin hello classic/1.0 chrome/skin/
+locale hello en-US chrome/locale/
+

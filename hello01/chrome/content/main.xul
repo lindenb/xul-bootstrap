@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://hello/skin/main.css" type="text/css"?>
+<!DOCTYPE main SYSTEM "chrome://hello/locale/main.dtd">
+<window id="main" title="&mainWindow.title;" width="300" height="300" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/javascript" src="chrome://hello/content/main.js"/>
+
+  <caption label="&mainWindow.message;"/>
+  <separator/>
+  <button label="More >>" oncommand="showMore();"/>
+  <separator/>
+  <description id="more-text" hidden="true">This is a simple XULRunner application. XUL is simple to use and quite powerful and can even be used on mobile devices.</description>
+
+</window>
