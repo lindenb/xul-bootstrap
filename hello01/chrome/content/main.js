@@ -1,3 +1,5 @@
+Components.utils.import("chrome://hello/content/js/hello.jsm");
+
 function jsdump(str) {
   Components.classes['@mozilla.org/consoleservice;1']
             .getService(Components.interfaces.nsIConsoleService)
@@ -7,6 +9,7 @@ function jsdump(str) {
 function showMore() {
   document.getElementById("more-text").hidden = false;
   jsdump("Hello!");
+  jsdump(Hello.incr());
 }
 
 
@@ -26,7 +29,7 @@ function testDatabase()
 
 	jsdump( mDBConn ) ;
 
-	mDBConn.executeSimpleSQL("create table tmp1(id int,name text)");
+	mDBConn.executeSimpleSQL("create table if not exists tmp1(id int,name text)");
 	
 	mDBConn.close();
 	}
