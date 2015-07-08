@@ -7,5 +7,6 @@ pref("javascript.options.strict", true);
 pref("nglayout.debug.disable_xul_cache", true);
 pref("nglayout.debug.disable_xul_fastload", true);
 pref("browser.dom.window.dump.enabled", true);
-// https://developer.mozilla.org/en-US/docs/Mozilla/Projects/XULRunner/Debugging_XULRunner_applications
+/* https://developer.mozilla.org/en-US/docs/Mozilla/Projects/XULRunner/Debugging_XULRunner_applications */
 pref("javascript.options.showInConsole", true);
+

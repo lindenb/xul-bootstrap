@@ -6,7 +6,8 @@
 	title="&mainWindow.title;" 
 	width="300"
 	height="300"
-	onload="testDatabase() ; "
+	onload="hello.init()"
+	onclose="hello.dispose()"
 	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
   <script type="application/javascript" src="chrome://hello/content/main.js"/>
