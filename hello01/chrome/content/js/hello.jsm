@@ -64,6 +64,7 @@ Hello.prototype.openConnection = function()
 	this.info("Opening SQL Database");
 	/* see https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIProperties */
 	 /* ProfD is a reference to the profile dir (ProfD) now. */
+	 /* see https://developer.mozilla.org/en-US/Add-ons/Code_snippets/File_I_O for Here are some of the special locations the directory service supports: */
 	var file = Components.classes["@mozilla.org/file/directory_service;1"]
                  .getService(Components.interfaces.nsIProperties)
                  .get("ProfD", Components.interfaces.nsIFile);

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<window onload="onLoad();" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<script><![CDATA[
+
+var gStatus, gProgressMeter;
+var maxProgress = 100;
+
+function onLoad() {
+  gStatus = document.getElementById("status");
+  gProgressMeter = document.getElementById("progressmeter");
+  
+  if("arguments" in window && window.arguments.length > 0) {
+    maxProgress = window.arguments[0].maxProgress;
+    setProgress(window.arguments[0].progress);
+    setStatus(window.arguments[0].status);
+  }
+}
+
+function setProgress(value) {
+  gProgressMeter.value = 100 * value / maxProgress;
+}
+
+function setStatus(text) {
+  gStatus.value = "Status: " + text + "...";
+}
+
+]]></script>
+ 
+<label id="status" value="(No status)" />
+<hbox>
+  <progressmeter id="progressmeter" mode="determined" />
+  <button label="Cancel" oncommand="close();" />
+</hbox>
+
+</window>
