@@ -4,6 +4,7 @@
 <!DOCTYPE main SYSTEM "chrome://hello/locale/main.dtd">
 <window id="main"
 	title="&mainWindow.title;" 
+	x="100" y="100"
 	width="300"
 	height="300"
 	onload="hello.init()"
@@ -15,11 +16,9 @@
 	  <menubar id="menubar">
 		    <menu label="File">        
 		        <menupopup onOpen="alert(self.id)">            
-		            <menuitem label="New" oncommand='window.openDialog("chrome://hello/content/win2.xul",
-                  "myProgress", "chrome,centerscreen", 
-                  {status: "Reading remote data", maxProgress: 50, progress: 10} );'/>                
-		            <menuitem label="Open"  oncommand='window.openDialog("chrome://hello/content/prefs.xul",
-                  "myProgress", "chrome,titlebar,toolbar,centerscreen,modal");'/>                
+		            <menuitem label="New" oncommand='window.openDialog("chrome://hello/content/win2.xul", "myProgress", "chrome,centerscreen",    {status: "Reading remote data", maxProgress: 50, progress: 10} );'/>  
+                   <menuitem label="New XUL Editor" oncommand='window.openDialog("chrome://hello/content/xuleditor.xul", "XUL editor", "chrome,centerscreen",null);'/>                
+		            <menuitem label="Open"  oncommand='window.openDialog("chrome://hello/content/prefs.xul",  "myProgress", "chrome,titlebar,toolbar,centerscreen,modal");'/>                
 		            <menuitem label="Save" onClick="alert(self.label)"/>                
 		            <menuseparator/>                
 		            <menuitem label="Exit" onClick="alert(self.label)"/>                
